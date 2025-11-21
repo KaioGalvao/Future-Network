@@ -2,7 +2,7 @@
   {
     "id": 1,
     "nome": "Ana Silva",
-    "foto": "/api/placeholder/200/200",
+    "foto": "https://randomuser.me/api/portraits/women/10.jpg",
     "cargo": "Engenheira de Software Sênior",
     "resumo": "Especialista em desenvolvimento full-stack com foco em arquiteturas escaláveis e microsserviços",
     "localizacao": "São Paulo/SP",
@@ -49,7 +49,7 @@
   {
     "id": 2,
     "nome": "Carlos Mendes",
-    "foto": "/api/placeholder/200/200",
+    "foto": "https://randomuser.me/api/portraits/men/10.jpg",
     "cargo": "Data Scientist",
     "resumo": "Cientista de dados especializado em machine learning e análise preditiva",
     "localizacao": "Rio de Janeiro/RJ",
@@ -89,7 +89,7 @@
   {
     "id": 3,
     "nome": "Juliana Costa",
-    "foto": "/api/placeholder/200/200",
+    "foto": "https://randomuser.me/api/portraits/women/11.jpg",
     "cargo": "UX/UI Designer",
     "resumo": "Designer focada em experiências digitais inclusivas e acessíveis",
     "localizacao": "Belo Horizonte/MG",
@@ -130,7 +130,7 @@
   {
     "id": 4,
     "nome": "Roberto Santos",
-    "foto": "/api/placeholder/200/200",
+    "foto": "https://randomuser.me/api/portraits/men/11.jpg",
     "cargo": "DevOps Engineer",
     "resumo": "Especialista em automação e infraestrutura como código",
     "localizacao": "Curitiba/PR",
@@ -170,7 +170,7 @@
   {
     "id": 5,
     "nome": "Mariana Oliveira",
-    "foto": "/api/placeholder/200/200",
+    "foto": "https://randomuser.me/api/portraits/women/12.jpg",
     "cargo": "Product Manager",
     "resumo": "Gestora de produto com experiência em transformação digital",
     "localizacao": "São Paulo/SP",
@@ -210,7 +210,7 @@
   {
     "id": 6,
     "nome": "Felipe Rodrigues",
-    "foto": "/api/placeholder/200/200",
+    "foto": "https://randomuser.me/api/portraits/men/12.jpg",
     "cargo": "Cybersecurity Analyst",
     "resumo": "Analista de segurança focado em pentesting e segurança de aplicações",
     "localizacao": "Brasília/DF",
@@ -250,7 +250,7 @@
   {
     "id": 7,
     "nome": "Camila Ferreira",
-    "foto": "/api/placeholder/200/200",
+    "foto": "https://randomuser.me/api/portraits/women/13.jpg",
     "cargo": "Frontend Developer",
     "resumo": "Desenvolvedora especializada em interfaces modernas e acessíveis",
     "localizacao": "Porto Alegre/RS",
@@ -290,7 +290,7 @@
   {
     "id": 8,
     "nome": "Lucas Almeida",
-    "foto": "/api/placeholder/200/200",
+    "foto": "https://randomuser.me/api/portraits/men/13.jpg",
     "cargo": "Backend Developer",
     "resumo": "Desenvolvedor backend especializado em APIs RESTful e GraphQL",
     "localizacao": "Florianópolis/SC",
@@ -330,7 +330,7 @@
   {
     "id": 9,
     "nome": "Beatriz Lima",
-    "foto": "/api/placeholder/200/200",
+    "foto": "https://randomuser.me/api/portraits/women/14.jpg",
     "cargo": "Mobile Developer",
     "resumo": "Desenvolvedora mobile especializada em React Native e Flutter",
     "localizacao": "Recife/PE",
@@ -370,7 +370,7 @@
   {
     "id": 10,
     "nome": "Diego Martins",
-    "foto": "/api/placeholder/200/200",
+    "foto": "https://randomuser.me/api/portraits/men/14.jpg",
     "cargo": "AI/ML Engineer",
     "resumo": "Engenheiro especializado em implementação de soluções de IA",
     "localizacao": "Campinas/SP",
@@ -410,7 +410,7 @@
   {
     "id": 11,
     "nome": "Fernanda Rocha",
-    "foto": "/api/placeholder/200/200",
+    "foto": "https://randomuser.me/api/portraits/women/15.jpg",
     "cargo": "Scrum Master",
     "resumo": "Facilitadora ágil especializada em transformação organizacional",
     "localizacao": "São Paulo/SP",
@@ -450,7 +450,7 @@
   {
     "id": 12,
     "nome": "Rodrigo Menezes",
-    "foto": "/api/placeholder/200/200",
+    "foto": "https://randomuser.me/api/portraits/men/15.jpg",
     "cargo": "QA Engineer",
     "resumo": "Engenheiro de qualidade focado em automação de testes",
     "localizacao": "Rio de Janeiro/RJ",
@@ -490,7 +490,7 @@
   {
     "id": 13,
     "nome": "Patrícia Gomes",
-    "foto": "/api/placeholder/200/200",
+    "foto": "https://randomuser.me/api/portraits/women/16.jpg",
     "cargo": "Content Strategist",
     "resumo": "Estrategista de conteúdo especializada em marketing digital",
     "localizacao": "Belo Horizonte/MG",
@@ -531,7 +531,7 @@
   {
     "id": 14,
     "nome": "Thiago Barbosa",
-    "foto": "/api/placeholder/200/200",
+    "foto": "https://randomuser.me/api/portraits/men/16.jpg",
     "cargo": "Blockchain Developer",
     "resumo": "Desenvolvedor especializado em soluções blockchain e smart contracts",
     "localizacao": "São Paulo/SP",
@@ -571,7 +571,7 @@
   {
     "id": 15,
     "nome": "Isabela Nunes",
-    "foto": "/api/placeholder/200/200",
+    "foto": "https://randomuser.me/api/portraits/women/17.jpg",
     "cargo": "HR Tech Specialist",
     "resumo": "Especialista em tecnologia para gestão de pessoas e recrutamento",
     "localizacao": "Curitiba/PR",
@@ -611,7 +611,7 @@
   {
     "id": 16,
     "nome": "Gabriel Costa",
-    "foto": "/api/placeholder/200/200",
+    "foto": "https://randomuser.me/api/portraits/men/17.jpg",
     "cargo": "Game Developer",
     "resumo": "Desenvolvedor de jogos especializado em Unity e Unreal Engine",
     "localizacao": "Porto Alegre/RS",
@@ -651,7 +651,7 @@
   {
     "id": 17,
     "nome": "Amanda Souza",
-    "foto": "/api/placeholder/200/200",
+    "foto": "https://randomuser.me/api/portraits/women/18.jpg",
     "cargo": "Business Analyst",
     "resumo": "Analista de negócios focada em transformação digital",
     "localizacao": "Brasília/DF",
@@ -691,7 +691,7 @@
   {
     "id": 18,
     "nome": "Rafael Lima",
-    "foto": "/api/placeholder/200/200",
+    "foto": "https://randomuser.me/api/portraits/men/18.jpg",
     "cargo": "Site Reliability Engineer",
     "resumo": "Engenheiro SRE especializado em observabilidade e resiliência",
     "localizacao": "Florianópolis/SC",
@@ -731,7 +731,7 @@
   {
     "id": 19,
     "nome": "Larissa Martins",
-    "foto": "/api/placeholder/200/200",
+    "foto": "https://randomuser.me/api/portraits/women/19.jpg",
     "cargo": "Graphic Designer",
     "resumo": "Designer gráfica especializada em branding e identidade visual",
     "localizacao": "Recife/PE",
@@ -771,7 +771,7 @@
   {
     "id": 20,
     "nome": "Eduardo Pires",
-    "foto": "/api/placeholder/200/200",
+    "foto": "https://randomuser.me/api/portraits/men/19.jpg",
     "cargo": "Cloud Architect",
     "resumo": "Arquiteto de soluções cloud especializado em AWS",
     "localizacao": "São Paulo/SP",
@@ -811,7 +811,7 @@
   {
     "id": 21,
     "nome": "Viviane Castro",
-    "foto": "/api/placeholder/200/200",
+    "foto": "https://randomuser.me/api/portraits/women/20.jpg",
     "cargo": "Tech Recruiter",
     "resumo": "Recrutadora tech especializada em talentos de tecnologia",
     "localizacao": "Campinas/SP",
@@ -851,7 +851,7 @@
   {
     "id": 22,
     "nome": "Henrique Souza",
-    "foto": "/api/placeholder/200/200",
+    "foto": "https://randomuser.me/api/portraits/men/20.jpg",
     "cargo": "IoT Engineer",
     "resumo": "Engenheiro especializado em Internet das Coisas e sistemas embarcados",
     "localizacao": "Belo Horizonte/MG",
@@ -891,7 +891,7 @@
   {
     "id": 23,
     "nome": "Carolina Alves",
-    "foto": "/api/placeholder/200/200",
+    "foto": "https://randomuser.me/api/portraits/women/21.jpg",
     "cargo": "Legal Tech Specialist",
     "resumo": "Advogada especializada em tecnologia e direito digital",
     "localizacao": "São Paulo/SP",
@@ -931,7 +931,7 @@
   {
     "id": 24,
     "nome": "Bruno Ferreira",
-    "foto": "/api/placeholder/200/200",
+    "foto": "https://randomuser.me/api/portraits/men/21.jpg",
     "cargo": "AR/VR Developer",
     "resumo": "Desenvolvedor especializado em realidade aumentada e virtual",
     "localizacao": "Curitiba/PR",
@@ -971,7 +971,7 @@
   {
     "id": 25,
     "nome": "Daniela Santos",
-    "foto": "/api/placeholder/200/200",
+    "foto": "https://randomuser.me/api/portraits/women/22.jpg",
     "cargo": "Growth Hacker",
     "resumo": "Especialista em crescimento e aquisição de usuários",
     "localizacao": "Rio de Janeiro/RJ",
@@ -1011,7 +1011,7 @@
   {
     "id": 26,
     "nome": "André Oliveira",
-    "foto": "/api/placeholder/200/200",
+    "foto": "https://randomuser.me/api/portraits/men/22.jpg",
     "cargo": "Software Architect",
     "resumo": "Arquiteto de software especializado em sistemas distribuídos",
     "localizacao": "Porto Alegre/RS",
@@ -1051,7 +1051,7 @@
   {
     "id": 27,
     "nome": "Renata Lima",
-    "foto": "/api/placeholder/200/200",
+    "foto": "https://randomuser.me/api/portraits/women/23.jpg",
     "cargo": "Technical Writer",
     "resumo": "Escritora técnica especializada em documentação de software",
     "localizacao": "Florianópolis/SC",
@@ -1091,7 +1091,7 @@
   {
     "id": 28,
     "nome": "Marcos Silva",
-    "foto": "/api/placeholder/200/200",
+    "foto": "https://randomuser.me/api/portraits/men/23.jpg",
     "cargo": "Database Administrator",
     "resumo": "DBA especializado em performance e otimização de bancos de dados",
     "localizacao": "Brasília/DF",
@@ -1131,7 +1131,7 @@
   {
     "id": 29,
     "nome": "Aline Cardoso",
-    "foto": "/api/placeholder/200/200",
+    "foto": "https://randomuser.me/api/portraits/women/24.jpg",
     "cargo": "Video Editor",
     "resumo": "Editora de vídeo especializada em conteúdo digital",
     "localizacao": "São Paulo/SP",
@@ -1171,7 +1171,7 @@
   {
     "id": 30,
     "nome": "Paulo Henrique",
-    "foto": "/api/placeholder/200/200",
+    "foto": "https://randomuser.me/api/portraits/men/24.jpg",
     "cargo": "Network Engineer",
     "resumo": "Engenheiro de redes especializado em infraestrutura corporativa",
     "localizacao": "Recife/PE",
@@ -1211,7 +1211,7 @@
   {
     "id": 31,
     "nome": "Letícia Moraes",
-    "foto": "/api/placeholder/200/200",
+    "foto": "https://randomuser.me/api/portraits/women/25.jpg",
     "cargo": "Social Media Manager",
     "resumo": "Gestora de redes sociais com foco em engajamento e crescimento",
     "localizacao": "Campinas/SP",
@@ -1252,7 +1252,7 @@
   {
     "id": 32,
     "nome": "Ricardo Nunes",
-    "foto": "/api/placeholder/200/200",
+    "foto": "https://randomuser.me/api/portraits/men/25.jpg",
     "cargo": "Embedded Systems Engineer",
     "resumo": "Engenheiro de sistemas embarcados para indústria automotiva",
     "localizacao": "São Paulo/SP",
@@ -1293,7 +1293,7 @@
   {
     "id": 33,
     "nome": "Priscila Dias",
-    "foto": "/api/placeholder/200/200",
+    "foto": "https://randomuser.me/api/portraits/women/26.jpg",
     "cargo": "UX Researcher",
     "resumo": "Pesquisadora UX focada em metodologias qualitativas e quantitativas",
     "localizacao": "Belo Horizonte/MG",
@@ -1333,7 +1333,7 @@
   {
     "id": 34,
     "nome": "Gustavo Fernandes",
-    "foto": "/api/placeholder/200/200",
+    "foto": "https://randomuser.me/api/portraits/men/26.jpg",
     "cargo": "Fintech Developer",
     "resumo": "Desenvolvedor especializado em soluções financeiras",
     "localizacao": "São Paulo/SP",
@@ -1373,7 +1373,7 @@
   {
     "id": 35,
     "nome": "Natália Rocha",
-    "foto": "/api/placeholder/200/200",
+    "foto": "https://randomuser.me/api/portraits/women/27.jpg",
     "cargo": "Customer Success Manager",
     "resumo": "Gestora de sucesso do cliente focada em retenção e crescimento",
     "localizacao": "Rio de Janeiro/RJ",
@@ -1413,7 +1413,7 @@
   {
     "id": 36,
     "nome": "Felipe Castro",
-    "foto": "/api/placeholder/200/200",
+    "foto": "https://randomuser.me/api/portraits/men/27.jpg",
     "cargo": "Security Consultant",
     "resumo": "Consultor de segurança especializado em compliance e governança",
     "localizacao": "Brasília/DF",
@@ -1453,7 +1453,7 @@
   {
     "id": 37,
     "nome": "Bianca Oliveira",
-    "foto": "/api/placeholder/200/200",
+    "foto": "https://randomuser.me/api/portraits/women/28.jpg",
     "cargo": "Data Engineer",
     "resumo": "Engenheira de dados especializada em pipelines e ETL",
     "localizacao": "Curitiba/PR",
@@ -1493,7 +1493,7 @@
   {
     "id": 38,
     "nome": "Tiago Almeida",
-    "foto": "/api/placeholder/200/200",
+    "foto": "https://randomuser.me/api/portraits/men/28.jpg",
     "cargo": "CTO",
     "resumo": "Chief Technology Officer com experiência em scale-ups",
     "localizacao": "São Paulo/SP",
@@ -1533,7 +1533,7 @@
   {
     "id": 39,
     "nome": "Vanessa Ribeiro",
-    "foto": "/api/placeholder/200/200",
+    "foto": "https://randomuser.me/api/portraits/women/29.jpg",
     "cargo": "Email Marketing Specialist",
     "resumo": "Especialista em email marketing e automação",
     "localizacao": "Porto Alegre/RS",
@@ -1573,7 +1573,7 @@
   {
     "id": 40,
     "nome": "Igor Souza",
-    "foto": "/api/placeholder/200/200",
+    "foto": "https://randomuser.me/api/portraits/men/29.jpg",
     "cargo": "Robotics Engineer",
     "resumo": "Engenheiro de robótica especializado em automação industrial",
     "localizacao": "Campinas/SP",
@@ -1613,7 +1613,7 @@
   {
     "id": 41,
     "nome": "Sabrina Martins",
-    "foto": "/api/placeholder/200/200",
+    "foto": "https://randomuser.me/api/portraits/women/30.jpg",
     "cargo": "Motion Designer",
     "resumo": "Designer de motion graphics para publicidade e branding",
     "localizacao": "São Paulo/SP",
@@ -1653,7 +1653,7 @@
   {
     "id": 42,
     "nome": "Alexandre Costa",
-    "foto": "/api/placeholder/200/200",
+    "foto": "https://randomuser.me/api/portraits/men/30.jpg",
     "cargo": "Solutions Engineer",
     "resumo": "Engenheiro de soluções focado em integrações enterprise",
     "localizacao": "Rio de Janeiro/RJ",
@@ -1693,7 +1693,7 @@
   {
     "id": 43,
     "nome": "Melissa Vieira",
-    "foto": "/api/placeholder/200/200",
+    "foto": "https://randomuser.me/api/portraits/women/31.jpg",
     "cargo": "Accessibility Specialist",
     "resumo": "Especialista em acessibilidade digital e inclusão",
     "localizacao": "Florianópolis/SC",
@@ -1733,7 +1733,7 @@
   {
     "id": 44,
     "nome": "Caio Pereira",
-    "foto": "/api/placeholder/200/200",
+    "foto": "https://randomuser.me/api/portraits/men/31.jpg",
     "cargo": "EdTech Developer",
     "resumo": "Desenvolvedor focado em tecnologias educacionais",
     "localizacao": "Belo Horizonte/MG",
@@ -1773,7 +1773,7 @@
   {
     "id": 45,
     "nome": "Jéssica Andrade",
-    "foto": "/api/placeholder/200/200",
+    "foto": "https://randomuser.me/api/portraits/women/32.jpg",
     "cargo": "Sustainability Analyst",
     "resumo": "Analista de sustentabilidade focada em tecnologia verde",
     "localizacao": "Curitiba/PR",
@@ -1813,7 +1813,7 @@
   {
     "id": 46,
     "nome": "Fernando Dias",
-    "foto": "/api/placeholder/200/200",
+    "foto": "https://randomuser.me/api/portraits/men/32.jpg",
     "cargo": "Platform Engineer",
     "resumo": "Engenheiro de plataforma especializado em developer experience",
     "localizacao": "São Paulo/SP",
@@ -1853,7 +1853,7 @@
   {
     "id": 47,
     "nome": "Tatiana Lopes",
-    "foto": "/api/placeholder/200/200",
+    "foto": "https://randomuser.me/api/portraits/women/33.jpg",
     "cargo": "Voice UX Designer",
     "resumo": "Designer especializada em interfaces de voz e conversacionais",
     "localizacao": "Recife/PE",
@@ -1893,7 +1893,7 @@
   {
     "id": 48,
     "nome": "Rodrigo Santos",
-    "foto": "/api/placeholder/200/200",
+    "foto": "https://randomuser.me/api/portraits/men/33.jpg",
     "cargo": "Localization Engineer",
     "resumo": "Engenheiro de localização especializado em internacionalização",
     "localizacao": "Porto Alegre/RS",
@@ -1935,7 +1935,7 @@
   {
     "id": 49,
     "nome": "Carla Mendes",
-    "foto": "/api/placeholder/200/200",
+    "foto": "https://randomuser.me/api/portraits/women/34.jpg",
     "cargo": "HealthTech Product Manager",
     "resumo": "Gestora de produto especializada em saúde digital",
     "localizacao": "São Paulo/SP",
@@ -1975,7 +1975,7 @@
   {
     "id": 50,
     "nome": "Leonardo Ribeiro",
-    "foto": "/api/placeholder/200/200",
+    "foto": "https://randomuser.me/api/portraits/men/34.jpg",
     "cargo": "Test Automation Architect",
     "resumo": "Arquiteto de automação de testes com foco em CI/CD",
     "localizacao": "Campinas/SP",
@@ -2015,7 +2015,7 @@
   {
     "id": 51,
     "nome": "Andressa Silva",
-    "foto": "/api/placeholder/200/200",
+    "foto": "https://randomuser.me/api/portraits/women/35.jpg",
     "cargo": "Community Manager",
     "resumo": "Gestora de comunidade focada em engajamento e advocacy",
     "localizacao": "Brasília/DF",
@@ -2055,7 +2055,7 @@
   {
     "id": 52,
     "nome": "Vinicius Moura",
-    "foto": "/api/placeholder/200/200",
+    "foto": "https://randomuser.me/api/portraits/men/35.jpg",
     "cargo": "Quantum Computing Researcher",
     "resumo": "Pesquisador em computação quântica aplicada",
     "localizacao": "São Paulo/SP",
@@ -2095,7 +2095,7 @@
   {
     "id": 53,
     "nome": "Paula Moreira",
-    "foto": "/api/placeholder/200/200",
+    "foto": "https://randomuser.me/api/portraits/women/36.jpg",
     "cargo": "Conversion Rate Optimizer",
     "resumo": "Especialista em otimização de conversão e experiência do usuário",
     "localizacao": "Florianópolis/SC",
@@ -2135,7 +2135,7 @@
   {
     "id": 54,
     "nome": "Marcelo Tavares",
-    "foto": "/api/placeholder/200/200",
+    "foto": "https://randomuser.me/api/portraits/men/36.jpg",
     "cargo": "Cloud Security Engineer",
     "resumo": "Engenheiro de segurança especializado em ambientes cloud",
     "localizacao": "Rio de Janeiro/RJ",
@@ -2175,7 +2175,7 @@
   {
     "id": 55,
     "nome": "Juliana Campos",
-    "foto": "/api/placeholder/200/200",
+    "foto": "https://randomuser.me/api/portraits/women/37.jpg",
     "cargo": "Performance Marketing Manager",
     "resumo": "Gestora de performance focada em ROI e growth",
     "localizacao": "São Paulo/SP",
@@ -2215,7 +2215,7 @@
   {
     "id": 56,
     "nome": "Pedro Henrique",
-    "foto": "/api/placeholder/200/200",
+    "foto": "https://randomuser.me/api/portraits/men/37.jpg",
     "cargo": "Rust Developer",
     "resumo": "Desenvolvedor especializado em sistemas de alta performance com Rust",
     "localizacao": "Curitiba/PR",
@@ -2255,7 +2255,7 @@
   {
     "id": 57,
     "nome": "Rafaela Borges",
-    "foto": "/api/placeholder/200/200",
+    "foto": "https://randomuser.me/api/portraits/women/38.jpg",
     "cargo": "Prompt Engineer",
     "resumo": "Engenheira especializada em otimização de prompts para LLMs",
     "localizacao": "Belo Horizonte/MG",
@@ -2295,7 +2295,7 @@
   {
     "id": 58,
     "nome": "Gustavo Moreira",
-    "foto": "/api/placeholder/200/200",
+    "foto": "https://randomuser.me/api/portraits/men/38.jpg",
     "cargo": "Revenue Operations Manager",
     "resumo": "Gestor de RevOps focado em alinhamento entre vendas e marketing",
     "localizacao": "Porto Alegre/RS",
@@ -2335,7 +2335,7 @@
   {
     "id": 59,
     "nome": "Luciana Freitas",
-    "foto": "/api/placeholder/200/200",
+    "foto": "https://randomuser.me/api/portraits/women/39.jpg",
     "cargo": "Service Designer",
     "resumo": "Designer de serviços focada em jornadas e experiências end-to-end",
     "localizacao": "Recife/PE",
@@ -2375,7 +2375,7 @@
   {
     "id": 60,
     "nome": "Daniel Barbosa",
-    "foto": "/api/placeholder/200/200",
+    "foto": "https://randomuser.me/api/portraits/men/39.jpg",
     "cargo": "Streaming Data Engineer",
     "resumo": "Engenheiro especializado em processamento de dados em tempo real",
     "localizacao": "Campinas/SP",

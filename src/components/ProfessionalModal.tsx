@@ -113,7 +113,6 @@ export function ProfessionalModal({ professional, open, onClose }: ProfessionalM
 
         <ScrollArea className="h-[calc(90vh-12rem)] px-6">
           <div className="space-y-6 py-6">
-            {/* Action Buttons */}
             <div className="flex gap-3">
               <Button 
                 onClick={handleMessage}
@@ -132,7 +131,6 @@ export function ProfessionalModal({ professional, open, onClose }: ProfessionalM
               </Button>
             </div>
 
-            {/* Resumo */}
             <div>
               <h3 className="text-lg font-semibold text-foreground mb-2">Sobre</h3>
               <p className="text-muted-foreground">{professional.resumo}</p>
@@ -140,7 +138,6 @@ export function ProfessionalModal({ professional, open, onClose }: ProfessionalM
 
             <Separator className="bg-border/50" />
 
-            {/* Habilidades Técnicas */}
             <div>
               <h3 className="text-lg font-semibold text-foreground mb-3">Habilidades Técnicas</h3>
               <div className="flex flex-wrap gap-2">
@@ -154,8 +151,6 @@ export function ProfessionalModal({ professional, open, onClose }: ProfessionalM
                 ))}
               </div>
             </div>
-
-            {/* Soft Skills */}
             <div>
               <h3 className="text-lg font-semibold text-foreground mb-3">Soft Skills</h3>
               <div className="flex flex-wrap gap-2">
@@ -174,7 +169,6 @@ export function ProfessionalModal({ professional, open, onClose }: ProfessionalM
 
             <Separator className="bg-border/50" />
 
-            {/* Experiências */}
             <div>
               <h3 className="text-lg font-semibold text-foreground mb-3 flex items-center gap-2">
                 <Briefcase className="h-5 w-5 text-primary" />
@@ -194,7 +188,6 @@ export function ProfessionalModal({ professional, open, onClose }: ProfessionalM
               </div>
             </div>
 
-            {/* Formação */}
             <div>
               <h3 className="text-lg font-semibold text-foreground mb-3 flex items-center gap-2">
                 <GraduationCap className="h-5 w-5 text-secondary" />
@@ -211,7 +204,6 @@ export function ProfessionalModal({ professional, open, onClose }: ProfessionalM
               </div>
             </div>
 
-            {/* Projetos */}
             {professional.projetos.length > 0 && (
               <div>
                 <h3 className="text-lg font-semibold text-foreground mb-3">Projetos</h3>
@@ -238,7 +230,6 @@ export function ProfessionalModal({ professional, open, onClose }: ProfessionalM
               </div>
             )}
 
-            {/* Certificações */}
             {professional.certificacoes.length > 0 && (
               <div>
                 <h3 className="text-lg font-semibold text-foreground mb-3 flex items-center gap-2">
@@ -259,7 +250,6 @@ export function ProfessionalModal({ professional, open, onClose }: ProfessionalM
               </div>
             )}
 
-            {/* Idiomas */}
             <div>
               <h3 className="text-lg font-semibold text-foreground mb-3 flex items-center gap-2">
                 <Globe className="h-5 w-5 text-primary" />
@@ -278,7 +268,6 @@ export function ProfessionalModal({ professional, open, onClose }: ProfessionalM
               </div>
             </div>
 
-            {/* Áreas de Interesse */}
             <div>
               <h3 className="text-lg font-semibold text-foreground mb-3">Áreas de Interesse</h3>
               <div className="flex flex-wrap gap-2">

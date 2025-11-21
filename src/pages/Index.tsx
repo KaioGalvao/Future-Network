@@ -67,14 +67,11 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background relative overflow-hidden">
-      {/* Animated Background Effects */}
       <div className="fixed inset-0 -z-10">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[120px] animate-float" />
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-secondary/20 rounded-full blur-[120px] animate-float" style={{ animationDelay: "1s" }} />
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-accent/10 rounded-full blur-[120px] animate-float" style={{ animationDelay: "2s" }} />
       </div>
-
-      {/* Header */}
       <header className="sticky top-0 z-50 glass-strong border-b border-primary/20 shadow-lg shadow-primary/5">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
@@ -91,10 +88,7 @@ const Index = () => {
           <ThemeToggle />
         </div>
       </header>
-
-      {/* Main Content */}
       <main className="container mx-auto px-4 py-8 space-y-8">
-        {/* Hero Section */}
         <div className="text-center space-y-4 py-8 animate-fade-in">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/30 mb-4">
             <Sparkles className="h-4 w-4 text-primary animate-glow-pulse" />
@@ -107,8 +101,6 @@ const Index = () => {
             Conecte-se com profissionais talentosos, compartilhe conhecimento e construa o futuro juntos
           </p>
         </div>
-
-        {/* Search and Filters */}
         <SearchBar
           searchTerm={searchTerm}
           onSearchChange={setSearchTerm}
@@ -117,15 +109,11 @@ const Index = () => {
           selectedCity={selectedCity}
           onCityChange={setSelectedCity}
         />
-
-        {/* Results Count */}
         <div className="flex items-center justify-between">
           <p className="text-muted-foreground">
             <span className="text-primary font-semibold">{filteredProfessionals.length}</span> profissionais encontrados
           </p>
         </div>
-
-        {/* Professionals Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredProfessionals.map((professional, index) => (
             <div 
@@ -139,8 +127,6 @@ const Index = () => {
             </div>
           ))}
         </div>
-
-        {/* No Results */}
         {filteredProfessionals.length === 0 && (
           <div className="text-center py-16 space-y-4 animate-fade-in">
             <div className="inline-flex p-4 rounded-full bg-muted/50">
@@ -153,15 +139,11 @@ const Index = () => {
           </div>
         )}
       </main>
-
-      {/* Professional Modal */}
       <ProfessionalModal
         professional={selectedProfessional}
         open={!!selectedProfessional}
         onClose={() => setSelectedProfessional(null)}
       />
-
-      {/* Footer */}
       <footer className="mt-20 border-t border-primary/20 glass py-8">
         <div className="container mx-auto px-4 text-center text-muted-foreground">
           <p className="text-sm">
