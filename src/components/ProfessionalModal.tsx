@@ -60,12 +60,15 @@ interface ProfessionalModalProps {
   professional: Professional | null;
   open: boolean;
   onClose: () => void;
+  onRecommend: (id: number) => void;
+  recommendCount?: number;
 }
 
-export function ProfessionalModal({ professional, open, onClose }: ProfessionalModalProps) {
+export function ProfessionalModal({ professional, open, onClose, onRecommend, recommendCount }: ProfessionalModalProps) {
   if (!professional) return null;
 
   const handleRecommend = () => {
+    onRecommend(professional.id);
     toast.success(`Você recomendou ${professional.nome}!`, {
       description: "Recomendação enviada com sucesso"
     });
@@ -113,7 +116,7 @@ export function ProfessionalModal({ professional, open, onClose }: ProfessionalM
 
         <ScrollArea className="h-[calc(90vh-12rem)] px-6">
           <div className="space-y-6 py-6">
-            <div className="flex gap-3">
+            <div className="flex gap-3 items-center">
               <Button 
                 onClick={handleMessage}
                 className="flex-1 bg-gradient-primary hover:opacity-90 transition-opacity text-white font-semibold"
@@ -129,6 +132,11 @@ export function ProfessionalModal({ professional, open, onClose }: ProfessionalM
                 <ThumbsUp className="mr-2 h-4 w-4" />
                 Recomendar
               </Button>
+              {typeof recommendCount === "number" && (
+                <div className="px-3 py-2 text-xs rounded-full bg-primary/10 border border-primary/30 text-primary font-medium">
+                  {recommendCount} recomendações
+                </div>
+              )}
             </div>
 
             <div>

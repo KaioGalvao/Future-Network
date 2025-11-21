@@ -3,7 +3,8 @@ import { ProfessionalCard } from "@/components/ProfessionalCard";
 import { ProfessionalModal } from "@/components/ProfessionalModal";
 import { SearchBar } from "@/components/SearchBar";
 import { ThemeToggle } from "@/components/ThemeToggle";
-import { Users, Sparkles } from "lucide-react";
+import { Users, Sparkles, ThumbsUp } from "lucide-react";
+import { Separator } from "@/components/ui/separator";
 import professionalsData from "@/data/professionals.json";
 
 interface Professional {
@@ -43,6 +44,7 @@ interface Professional {
 
 const Index = () => {
   const [selectedProfessional, setSelectedProfessional] = useState<Professional | null>(null);
+  const [recommendationCounts, setRecommendationCounts] = useState<Record<number, number>>({});
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedArea, setSelectedArea] = useState("Todas");
   const [selectedCity, setSelectedCity] = useState("Todas");
@@ -64,6 +66,15 @@ const Index = () => {
       return matchesSearch && matchesArea && matchesCity;
     });
   }, [professionals, searchTerm, selectedArea, selectedCity]);
+
+  const topRecommended = useMemo(() => {
+    const withCounts = professionals.filter(p => (recommendationCounts[p.id] || 0) > 0);
+    return withCounts.sort((a, b) => (recommendationCounts[b.id] || 0) - (recommendationCounts[a.id] || 0)).slice(0, 6);
+  }, [professionals, recommendationCounts]);
+
+  const handleRecommend = (id: number) => {
+    setRecommendationCounts(prev => ({ ...prev, [id]: (prev[id] || 0) + 1 }));
+  };
 
   return (
     <div className="min-h-screen bg-background relative overflow-hidden">
@@ -114,6 +125,24 @@ const Index = () => {
             <span className="text-primary font-semibold">{filteredProfessionals.length}</span> profissionais encontrados
           </p>
         </div>
+        {topRecommended.length > 0 && (
+          <section className="space-y-4">
+            <h3 className="text-xl font-semibold flex items-center gap-2">
+              <ThumbsUp className="h-5 w-5 text-primary" /> Mais Recomendados
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {topRecommended.map(prof => (
+                <div key={prof.id} className="relative">
+                  <ProfessionalCard professional={prof} onClick={() => setSelectedProfessional(prof)} />
+                  <div className="absolute top-2 right-2 px-2 py-1 rounded-full bg-primary/90 text-white text-xs font-medium">
+                    {(recommendationCounts[prof.id] || 0)}
+                  </div>
+                </div>
+              ))}
+            </div>
+            <Separator className="bg-border/50" />
+          </section>
+        )}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredProfessionals.map((professional, index) => (
             <div 
@@ -143,6 +172,8 @@ const Index = () => {
         professional={selectedProfessional}
         open={!!selectedProfessional}
         onClose={() => setSelectedProfessional(null)}
+        onRecommend={handleRecommend}
+        recommendCount={selectedProfessional ? (recommendationCounts[selectedProfessional.id] || 0) : undefined}
       />
       <footer className="mt-20 border-t border-primary/20 glass py-8">
         <div className="container mx-auto px-4 text-center text-muted-foreground">
