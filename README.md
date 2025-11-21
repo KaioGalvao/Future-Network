@@ -12,6 +12,14 @@ Aplicação web para conectar profissionais e oportunidades, com busca, filtros 
 - Estado/Providers: `App.tsx` habilita `@tanstack/react-query`, `TooltipProvider`, toasts (`ui/toaster` e `ui/sonner`).
 - Tema: `ThemeToggle` alterna claro/escuro; variáveis CSS estão em `src/styles/index.css`.
 
+### Recomendações e Destaques
+- Modal de perfil possui ação “Recomendar” que incrementa um contador em memória por profissional.
+- A seção “Mais Recomendados” exibe até 6 profissionais com um card exclusivo (visual destacado), com badge de ranking, contagem de recomendações e detalhes rápidos.
+
+### Paginação
+- A listagem principal de profissionais é paginada: 6 por página.
+- Ao alterar busca/filtros, a paginação volta para a página 1 automaticamente.
+
 ## Requisitos
 - Node.js 18+
 - npm
@@ -24,7 +32,7 @@ npm install
 npm run dev
 ```
 
-Vite abrirá o servidor local (geralmente em http://localhost:5173). Para build de produção e preview:
+Vite abrirá o servidor local (geralmente em http://localhost:8080). Para build de produção e preview:
 
 ```powershell
 npm run build
@@ -42,10 +50,11 @@ Scripts disponíveis:
 - `index.html`: entrada HTML do Vite.
 - `src/main.tsx`: bootstrap do React e import do CSS global.
 - `src/App.tsx`: provedores globais, toasts e rotas.
-- `src/pages/Index.tsx`: página principal com busca, filtros, grid de profissionais e modal de detalhes.
+- `src/pages/Index.tsx`: página principal com busca, filtros, grid com paginação (6/pg), seção “Mais Recomendados” com cards exclusivos e modal de detalhes.
 - `src/pages/NotFound.tsx`: rota coringa 404.
 - `src/components`:
-	- `ProfessionalCard.tsx`: card do profissional; usa `professional.foto` para a imagem.
+	- `ProfessionalCard.tsx`: card padrão do profissional usado na grid paginada; usa `professional.foto` para a imagem.
+	- Cards “Mais Recomendados”: renderizados diretamente em `Index.tsx` com layout diferenciado (gradiente, ranking e contador).
 	- `ProfessionalModal.tsx`: modal com detalhes, ações (mensagem, recomendar) e seções (experiências, formação, etc.).
 	- `SearchBar.tsx`: campo de busca + filtros (área, cidade).
 	- `ThemeToggle.tsx` e `NavLink.tsx`: utilidades de layout/navegação/tema.

@@ -3,7 +3,7 @@ import { ProfessionalCard } from "@/components/ProfessionalCard";
 import { ProfessionalModal } from "@/components/ProfessionalModal";
 import { SearchBar } from "@/components/SearchBar";
 import { ThemeToggle } from "@/components/ThemeToggle";
-import { Users, Sparkles, ThumbsUp } from "lucide-react";
+import { Users, Sparkles, ThumbsUp, Crown, MapPin, Briefcase } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import {
   Pagination,
@@ -14,6 +14,9 @@ import {
   PaginationNext,
   PaginationEllipsis,
 } from "@/components/ui/pagination";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import professionalsData from "@/data/professionals.json";
 
 interface Professional {
@@ -153,13 +156,76 @@ const Index = () => {
               <ThumbsUp className="h-5 w-5 text-primary" /> Mais Recomendados
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {topRecommended.map(prof => (
-                <div key={prof.id} className="relative">
-                  <ProfessionalCard professional={prof} onClick={() => setSelectedProfessional(prof)} />
-                  <div className="absolute top-2 right-2 px-2 py-1 rounded-full bg-primary/90 text-white text-xs font-medium">
-                    {(recommendationCounts[prof.id] || 0)}
+              {topRecommended.map((prof, idx) => (
+                <Card
+                  key={prof.id}
+                  onClick={() => setSelectedProfessional(prof)}
+                  className="group relative overflow-hidden cursor-pointer border-primary/40 bg-card/60 backdrop-blur-md transition-all duration-300 hover:shadow-xl hover:shadow-primary/20 hover:scale-[1.02]"
+                >
+                  <div className="absolute inset-0 pointer-events-none">
+                    <div className="absolute -top-20 -right-20 h-56 w-56 rounded-full bg-primary/10 blur-3xl" />
+                    <div className="absolute -bottom-16 -left-16 h-48 w-48 rounded-full bg-secondary/10 blur-3xl" />
                   </div>
-                </div>
+
+                  <div className="relative h-40 overflow-hidden">
+                    <img
+                      src={prof.foto}
+                      alt={prof.nome}
+                      className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/10 to-transparent" />
+                    <div className="absolute top-3 left-3 flex items-center gap-2">
+                      <Badge className="flex items-center gap-1 bg-primary/90 text-primary-foreground">
+                        <Crown className="h-3.5 w-3.5" /> Top {idx + 1}
+                      </Badge>
+                    </div>
+                    <div className="absolute top-3 right-3 px-2 py-1 rounded-full bg-primary text-primary-foreground text-xs font-semibold flex items-center gap-1 shadow-sm">
+                      <ThumbsUp className="h-3.5 w-3.5" /> {(recommendationCounts[prof.id] || 0)}
+                    </div>
+                  </div>
+
+                  <CardContent className="space-y-3 pt-4">
+                    <div className="flex items-start justify-between gap-3">
+                      <div>
+                        <h4 className="text-lg font-bold tracking-tight group-hover:text-primary transition-colors">
+                          {prof.nome}
+                        </h4>
+                        <div className="mt-1 flex items-center gap-2 text-sm text-muted-foreground">
+                          <Briefcase className="h-4 w-4 text-primary" />
+                          <span>{prof.cargo}</span>
+                        </div>
+                        <div className="mt-1 flex items-center gap-2 text-sm text-muted-foreground">
+                          <MapPin className="h-4 w-4 text-secondary" />
+                          <span>{prof.localizacao}</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="flex flex-wrap gap-2">
+                      {prof.habilidadesTecnicas.slice(0, 4).map((skill) => (
+                        <Badge
+                          key={skill}
+                          variant="secondary"
+                          className="bg-primary/10 text-primary border-primary/30"
+                        >
+                          {skill}
+                        </Badge>
+                      ))}
+                      {prof.habilidadesTecnicas.length > 4 && (
+                        <Badge variant="outline" className="border-primary/30 text-primary">
+                          +{prof.habilidadesTecnicas.length - 4}
+                        </Badge>
+                      )}
+                    </div>
+
+                    <div className="flex items-center justify-between pt-2">
+                      <div className="text-xs text-muted-foreground">Clique para ver o perfil</div>
+                      <Button size="sm" onClick={(e) => { e.stopPropagation(); setSelectedProfessional(prof); }}>
+                        Abrir perfil
+                      </Button>
+                    </div>
+                  </CardContent>
+                </Card>
               ))}
             </div>
             <Separator className="bg-border/50" />
