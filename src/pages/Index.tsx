@@ -1,10 +1,19 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { ProfessionalCard } from "@/components/ProfessionalCard";
 import { ProfessionalModal } from "@/components/ProfessionalModal";
 import { SearchBar } from "@/components/SearchBar";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { Users, Sparkles, ThumbsUp } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
+import {
+  Pagination,
+  PaginationContent,
+  PaginationItem,
+  PaginationLink,
+  PaginationPrevious,
+  PaginationNext,
+  PaginationEllipsis,
+} from "@/components/ui/pagination";
 import professionalsData from "@/data/professionals.json";
 
 interface Professional {
@@ -48,6 +57,8 @@ const Index = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedArea, setSelectedArea] = useState("Todas");
   const [selectedCity, setSelectedCity] = useState("Todas");
+  const [currentPage, setCurrentPage] = useState(1);
+  const pageSize = 6;
 
   const professionals = professionalsData as Professional[];
 
@@ -66,6 +77,17 @@ const Index = () => {
       return matchesSearch && matchesArea && matchesCity;
     });
   }, [professionals, searchTerm, selectedArea, selectedCity]);
+
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [searchTerm, selectedArea, selectedCity]);
+
+  const totalPages = Math.ceil(filteredProfessionals.length / pageSize) || 1;
+  const paginatedProfessionals = useMemo(() => {
+    const start = (currentPage - 1) * pageSize;
+    const end = start + pageSize;
+    return filteredProfessionals.slice(start, end);
+  }, [filteredProfessionals, currentPage]);
 
   const topRecommended = useMemo(() => {
     const withCounts = professionals.filter(p => (recommendationCounts[p.id] || 0) > 0);
@@ -144,7 +166,7 @@ const Index = () => {
           </section>
         )}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredProfessionals.map((professional, index) => (
+          {paginatedProfessionals.map((professional, index) => (
             <div 
               key={professional.id} 
               style={{ animationDelay: `${index * 0.05}s` }}
@@ -156,6 +178,66 @@ const Index = () => {
             </div>
           ))}
         </div>
+        {filteredProfessionals.length > pageSize && (
+          <Pagination className="mt-8">
+            <PaginationContent>
+              <PaginationItem>
+                <PaginationPrevious
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setCurrentPage(p => Math.max(1, p - 1));
+                  }}
+                  className={currentPage === 1 ? "pointer-events-none opacity-50" : ""}
+                />
+              </PaginationItem>
+              {Array.from({ length: totalPages }).map((_, i) => {
+                const pageNum = i + 1;
+                // Show page numbers with ellipsis logic if many pages
+                if (totalPages > 7) {
+                  const isFirst = pageNum === 1;
+                  const isLast = pageNum === totalPages;
+                  const isNearCurrent = Math.abs(pageNum - currentPage) <= 1;
+                  const showDirect = isFirst || isLast || isNearCurrent || (pageNum === 2 && currentPage <= 3) || (pageNum === totalPages - 1 && currentPage >= totalPages - 2);
+                  if (!showDirect) {
+                    if (pageNum === 3 || pageNum === totalPages - 2) {
+                      return (
+                        <PaginationItem key={`ellipsis-${pageNum}`}>
+                          <PaginationEllipsis />
+                        </PaginationItem>
+                      );
+                    }
+                    return null;
+                  }
+                }
+                return (
+                  <PaginationItem key={pageNum}>
+                    <PaginationLink
+                      href="#"
+                      isActive={pageNum === currentPage}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        setCurrentPage(pageNum);
+                      }}
+                    >
+                      {pageNum}
+                    </PaginationLink>
+                  </PaginationItem>
+                );
+              })}
+              <PaginationItem>
+                <PaginationNext
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setCurrentPage(p => Math.min(totalPages, p + 1));
+                  }}
+                  className={currentPage === totalPages ? "pointer-events-none opacity-50" : ""}
+                />
+              </PaginationItem>
+            </PaginationContent>
+          </Pagination>
+        )}
         {filteredProfessionals.length === 0 && (
           <div className="text-center py-16 space-y-4 animate-fade-in">
             <div className="inline-flex p-4 rounded-full bg-muted/50">
