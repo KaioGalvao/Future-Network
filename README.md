@@ -70,3 +70,8 @@ Scripts disponíveis:
 ## Equipe
 
 - Kaio Victtor Santos Andrade Galvão - rm566536
+
+## Links Úteis
+
+- Projeto hospedado: https://future-network.vercel.app
+- Repositório do Git: https://github.com/KaioGalvao/Future-Network
